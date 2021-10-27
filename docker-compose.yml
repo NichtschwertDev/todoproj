@@ -1,0 +1,9 @@
+services:
+  postgres-dev:
+    image: postgres:14.0
+    environment:
+      - POSTGRES_PASSWORD=ijgig8rd9gzdr8g90erg3034gh89
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db/dev/databases.sql:/docker-entrypoint-initdb.d/1-dev-database.sql
